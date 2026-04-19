@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet || App meteo</title>
     <link rel="stylesheet" href="assets/css/index.css" />
+    <!-- OUTILES GOOGLE -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <input type="radio" name="mode" id="jour" />
+    <input type="radio" name="mode" id="pluie" />
+    <input type="radio" name="mode" id="nuit" />
+
     <!--  L'entete -->
     <nav>
-      <header></header>
+      <header>
+        <!-- Ici on fait varier les font  -->
+        <div class="theme">
+          <label for="jour"> Jour</label>
+          <label for="pluie"> Pluie</label>
+          <label for="nuit">Nuit</label>
+        </div>
+      </header>
     </nav>
     <!-- Le main -->
     <main>
@@ -18,18 +34,63 @@
         <div>
           <div>
             <div>
-              <img src="" alt="" />
+              <span class="material-symbols-outlined"> clear_day </span>
             </div>
             <div>
-              <p></p>
+              <p>Lever du soleil : 04:59</p>
             </div>
             <div>
-              <p></p>
+              <p>Coucher du soleil : 20:47</p>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <div>
+              <p>Friday 27 Avril 11:00</p>
+            </div>
+            <div>
+              <p>+25° C</p>
+            </div>
+            <div>
+              <p>Ressenti 23°C</p>
+            </div>
+            <div>
+              <p>Toute la journée sera nuageuse.</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Plus de détails:</p>
+            </div>
+            <div>
+              <p>Vitesse du vent : <span> 1.8 m/s</span></p>
+            </div>
+            <div>
+              <p>Humidité de l’air : <span>42–76%</span></p>
+            </div>
+            <div>
+              <p>Pression : <span>747 mm</span></p>
+            </div>
+            <div>
+              <p>Probabilité de précipitation : <span>2%</span></p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div><p>Nuit</p></div>
+              <div>
+                <div></div>
+                <div>
+                  <p>+18° C</p>
+                </div>
+                <div>
+                  <p>00h:00</p>
+                </div>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </section>
     </main>

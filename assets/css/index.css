@@ -1,0 +1,29 @@
+
+input[type="radio"] {
+  display: none;
+}
+
+
+nav, main {
+  transition: background 0.8s ease-in-out; 
+}
+
+
+
+/* --- MODE JOUR --- */
+#jour:checked ~ nav,
+#jour:checked ~ main {
+  background: linear-gradient(to bottom, #56CCF2, #2F80ED);
+}
+
+/* --- MODE PLUIE --- */
+#pluie:checked ~ nav,
+#pluie:checked ~ main {
+  background: linear-gradient(to bottom, #606c88, #3f4c6b);
+}
+
+/* --- MODE NUIT --- */
+#nuit:checked ~ nav,
+#nuit:checked ~ main {
+  background: linear-gradient(to bottom, #0F2027, #2C5364);
+}
