@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
@@ -285,3 +286,54 @@ main {
   display: block;
   margin-bottom: 8px;
 }
+=======
+
+body {
+    font-family: Arial, sans-serif;
+    color: #345;
+    min-height: 100vh;/* Prend toute la hauteur de l'écran au minimum */
+}
+/*---la partie header*/
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;/* ajouter de l'espace en bas d'un élément*/
+    
+}
+.logo{
+    font-weight: 800;
+    letter-spacing: 2px;/* il sert a spacer les lettres d'un texte*/
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1 solid;
+    
+
+}
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.localisation:hover{
+    
+    font-size: 0.9rem;/*le texte sera légèrement plus petit que la taille normale*/
+    opacity: 0.8;/* l'element sera en moitié transparent(50%)*/
+    cursor: pointer;
+    
+}
+.langue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.langue:hover{
+    background: none;
+    border: none;
+   background-color: white; 
+    cursor: pointer;
+    font-weight: bold;/*il rend tout le texte en gras*/
+}
+>>>>>>> origin/tamba
