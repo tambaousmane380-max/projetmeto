@@ -286,6 +286,7 @@ main {
   margin-bottom: 8px;
 }
 
+
 /*---la partie header*/
 .top-bar{
     display: flex;
@@ -325,6 +326,7 @@ main {
 .langue:hover{
     background: none;
     border: none;
+   
     cursor: pointer;
     font-weight: bold;/*il rend tout le texte en gras*/
 }
