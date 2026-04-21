@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet || App meteo</title>
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!--  L'entete -->
+    <input type="radio" name="mode" id="jour" checked />
+    <input type="radio" name="mode" id="pluie" />
+    <input type="radio" name="mode" id="nuit" />
+
     <nav>
       <header>
+       
         <div class="top-bar">
           <div class="logo"><p>⛈️APPLICATION-METEO</p></div>
         <div class="localisation">
@@ -20,6 +28,7 @@
         <div class="langue">
          <div> <span>°C | °F</span></div>
           <div><span>FR | WOLOF</span></div>
+          
         </div>
         </div>
          <div class="themes conteneur">
@@ -28,25 +37,125 @@
           <label for="nuit">Nuit</label>
       </header>
     </nav>
-    <!-- Le main -->
+
     <main>
-      <!-- Section 1 -->
-      <section>
-        <div>
-          <div>
-            <div>
-              <img src="" alt="" />
+      <section class="section-meteo">
+        <div class="conteneur bloc-principal">
+          <div class="infos-soleil carte-verre">
+            <div class="icone-meteo">
+              <span class="material-symbols-outlined">partly_cloudy_day</span>
             </div>
-            <div>
-              <p></p>
+            <div class="texte-soleil">
+              <p>Lever du soleil</p>
+              <strong>06:12</strong>
             </div>
-            <div>
-              <p></p>
+            <div class="texte-soleil">
+              <p>Coucher du soleil</p>
+              <strong>18:54</strong>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
+
+          <div class="meteo-principale carte-verre">
+            <p class="date-heure">Samedi 19 Avril - 15:00</p>
+            <h1>+25&deg;C</h1>
+            <p class="temperature-ressentie">Ressenti 23&deg;C</p>
+            <p class="resume-meteo">
+              Le ciel reste partiellement nuageux avec un temps calme pendant
+              toute la journee.
+            </p>
+          </div>
+
+          <div class="details-meteo carte-verre">
+            <p class="titre-details">Plus de details</p>
+            <div class="ligne-detail">
+              <span>Vent</span>
+              <strong>1.8 m/s</strong>
+            </div>
+            <div class="ligne-detail">
+              <span>Humidite</span>
+              <strong>42%</strong>
+            </div>
+            <div class="ligne-detail">
+              <span>Pression</span>
+              <strong>747 mm</strong>
+            </div>
+            <div class="ligne-detail">
+              <span>Precipitation</span>
+              <strong>2%</strong>
+            </div>
+          </div>
+
+          <div class="meteo-heures carte-verre">
+            <section class="carte-heure">
+              <p class="moment-journee">Nuit</p>
+              <span class="material-symbols-outlined">clear_night</span>
+              <strong>19&deg;C</strong>
+              <p>00:00</p>
+            </section>
+            <section class="carte-heure">
+              <p class="moment-journee">Matin</p>
+              <span class="material-symbols-outlined">cloudy</span>
+              <strong>21&deg;C</strong>
+              <p>06:00</p>
+            </section>
+            <section class="carte-heure">
+              <p class="moment-journee">Jour</p>
+              <span class="material-symbols-outlined">partly_cloudy_day</span>
+              <strong>25&deg;C</strong>
+              <p>12:00</p>
+            </section>
+            <section class="carte-heure">
+              <p class="moment-journee">Soir</p>
+              <span class="material-symbols-outlined">wb_twilight</span>
+              <strong>22&deg;C</strong>
+              <p>18:00</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="conteneur bloc-previsions">
+          <div class="entete-previsions">
+            <p>Aujourd&apos;hui</p>
+            <a href="#">Previsions 5 jours</a>
+          </div>
+
+          <div class="liste-previsions">
+            <section class="carte-prevision">
+              <h3>Dimanche</h3>
+              <p>20 Avril</p>
+              <span class="material-symbols-outlined">rainy</span>
+              <strong>18&deg;C / 26&deg;C</strong>
+              <small>Averses</small>
+            </section>
+            <section class="carte-prevision">
+              <h3>Lundi</h3>
+              <p>21 Avril</p>
+              <span class="material-symbols-outlined">partly_cloudy_day</span>
+              <strong>19&deg;C / 27&deg;C</strong>
+              <small>Nuages epars</small>
+            </section>
+            <section class="carte-prevision">
+              <h3>Mardi</h3>
+              <p>22 Avril</p>
+              <span class="material-symbols-outlined">clear_day</span>
+              <strong>21&deg;C / 30&deg;C</strong>
+              <small>Ensoleille</small>
+            </section>
+            <section class="carte-prevision">
+              <h3>Mercredi</h3>
+              <p>23 Avril</p>
+              <span class="material-symbols-outlined">thunderstorm</span>
+              <strong>20&deg;C / 28&deg;C</strong>
+              <small>Orages</small>
+            </section>
+            <section class="carte-prevision">
+              <h3>Jeudi</h3>
+              <p>24 Avril</p>
+              <span class="material-symbols-outlined">cloudy</span>
+              <strong>19&deg;C / 25&deg;C</strong>
+              <small>Couvert</small>
+            </section>
+          </div>
         </div>
       </section>
     </main>
