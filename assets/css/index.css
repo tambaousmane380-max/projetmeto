@@ -43,7 +43,293 @@ body {
 .langue:hover{
     background: none;
     border: none;
-   background-color: white; 
     cursor: pointer;
     font-weight: bold;/*il rend tout le texte en gras*/
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+ *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(6px);
+  transform: scale(1.04);
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 178, 136, 0.52),
+    rgba(33, 20, 28, 0.82)
+  );
+  z-index: -1;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+nav,
+main,
+body::after {
+  transition: background 0.8s ease-in-out;
+}
+
+nav {
+  padding: 22px 0;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  padding-bottom: 40px;
+}
+
+.conteneur {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.themes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.themes label {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+#jour:checked ~ nav .themes label[for="jour"],
+#pluie:checked ~ nav .themes label[for="pluie"],
+#nuit:checked ~ nav .themes label[for="nuit"] {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+#jour:checked ~ main {
+  background: linear-gradient(180deg, rgba(255, 170, 128, 0.16), transparent);
+}
+
+#pluie:checked ~ main {
+  background: linear-gradient(180deg, rgba(96, 108, 136, 0.2), transparent);
+}
+
+#nuit:checked ~ main {
+  background: linear-gradient(180deg, rgba(12, 26, 42, 0.3), transparent);
+}
+
+.section-meteo {
+  padding-top: 16px;
+}
+
+.bloc-principal {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.carte-verre {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+
+.infos-soleil {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  padding: 28px 18px;
+}
+
+.icone-meteo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.infos-soleil span {
+  font-size: 84px;
+}
+
+.texte-soleil p,
+.infos-soleil strong,
+.ligne-detail span,
+.resume-meteo,
+.carte-prevision p,
+.carte-prevision small,
+.carte-heure p {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.meteo-principale {
+  width: 380px;
+  padding: 34px;
+}
+
+.date-heure,
+.titre-details,
+.moment-journee,
+.entete-previsions p,
+.entete-previsions a {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.meteo-principale h1 {
+  font-size: 82px;
+  line-height: 1;
+  margin: 14px 0 10px;
+}
+
+.temperature-ressentie {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.resume-meteo {
+  max-width: 28rem;
+}
+
+.details-meteo {
+  width: 250px;
+  padding: 30px 24px;
+}
+
+.titre-details {
+  margin-bottom: 18px;
+}
+
+.ligne-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ligne-detail:last-child {
+  border-bottom: 0;
+}
+
+.meteo-heures {
+  width: 460px;
+  padding: 36px 28px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  height: 310px;
+  align-items: center;
+}
+
+.carte-heure {
+  flex: 1;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 24px 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.carte-heure span {
+  display: block;
+  font-size: 2rem;
+  margin: 14px 0 10px;
+}
+
+.carte-heure strong {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.moment-journee {
+  margin-bottom: 26px;
+}
+
+.bloc-previsions {
+  margin-top: 26px;
+}
+
+.entete-previsions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.entete-previsions a {
+  color: white;
+  text-decoration: none;
+}
+
+.liste-previsions {
+  display: flex;
+  gap: 18px;
+}
+
+.carte-prevision {
+  width: 225px;
+  padding: 24px 20px;
+  border-radius: 22px;
+  background: rgba(20, 18, 27, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.carte-prevision span {
+  display: block;
+  font-size: 2.2rem;
+  margin: 16px 0;
+}
+
+.carte-prevision strong {
+  display: block;
+  margin-bottom: 8px;
 }
